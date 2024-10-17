@@ -32,16 +32,16 @@ export default function ThemesSearch({
 }) {
 	return (
 		<>
-			<div
-				className="mt-10 flex w-full items-center overflow-hidden rounded-full border border-black bg-black/10 p-2 dark:border-muted dark:bg-muted/50">
-				<SearchIcon className="mx-4 size-6 text-black dark:text-white"/>
+			<div className="mt-10 flex w-full items-center overflow-hidden rounded-full border border-black bg-black/10 p-2 dark:border-muted dark:bg-muted/50">
+				<SearchIcon className="mx-4 size-6 text-black dark:text-white" />
 				<input
 					type="text"
 					value={input}
 					onChange={(e) => setInput(e.target.value)}
 					placeholder="Search Mods"
-					className="w-full border-none bg-transparent text-black focus:border-none focus:outline-none focus:ring-0 dark:text-white"
+					className="w-full border-none bg-transparent py-1 text-black focus:border-none focus:outline-none focus:ring-0 dark:text-white"
 				/>
+
 				{/*
 				<Button
 					onClick={() =>
@@ -64,7 +64,7 @@ export default function ThemesSearch({
 			<div className="flex gap-2">
 				<Select value={sortBy} onValueChange={setSortBy}>
 					<SelectTrigger className="mt-4 w-full sm:w-[180px]">
-						<SelectValue placeholder="Sort by"/>
+						<SelectValue placeholder="Sort by" />
 					</SelectTrigger>
 					<SelectContent>
 						<SelectItem value="name">Alphabetical</SelectItem>
@@ -74,7 +74,7 @@ export default function ThemesSearch({
 				</Select>
 				<Select value={showMods} onValueChange={setShowMods}>
 					<SelectTrigger className="mt-4 w-full sm:w-[180px]">
-						<SelectValue placeholder="Sort by"/>
+						<SelectValue placeholder="Sort by" />
 					</SelectTrigger>
 					<SelectContent>
 						<SelectItem value="showAll">Show All Mods</SelectItem>
@@ -94,7 +94,7 @@ export default function ThemesSearch({
 							onClick={() => toggleTag(tag)}
 							className="flex items-center"
 						>
-							<TagIcon className="mr-1 h-4 w-4"/>
+							<TagIcon className="mr-1 h-4 w-4" />
 							{tag}
 						</Button>
 					))}
